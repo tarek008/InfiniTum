@@ -26,10 +26,17 @@ typedef struct PERSO_PRINCIPALE
 	SDL_Surface *tab[64];
 	float time;
 	int score;
-	SDL_Rect pos_score;
     int stage; 
 	int objective; 
 }PERSO_PRINCIPALE;
+
+typedef struct BACKGROUND
+{
+ SDL_Rect position;
+ SDL_Surface img;
+int nb_img;
+
+}BACKGROUND;
 
 //****** MENU PRICIPALE *******
 
