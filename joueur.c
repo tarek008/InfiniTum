@@ -1,8 +1,14 @@
 #include "joeur.h"
  void init_persoP(PERSO_PRINCIPALE *p)
 {
-p->position.x=400;
-p->position.y=520;
+
+ p->position.x=300;
+  p->position.y=150;
+  p->position.w=1200;
+  p->position.h=600;
+
+
+
 char nomFich[22];
 
 int i;
@@ -24,23 +30,26 @@ void afficher_personnageP(PERSO_PRINCIPALE *perso,SDL_Surface *fenetre)
 }
 
 
-void deplacement_clavier(PERSO_PRINCIPALE *perso,int sens, int bg , int vitesse)
+void deplacement_clavier(PERSO_PRINCIPALE *perso,int sens, BACKGROUND *bg , int vitesse)
 {
 
 if(sens==1)
     {
-        
+    if(perso->position.x>255)
+        perso->position.x-=vitesse;
+        else
         perso->position.x+=vitesse;
-
-    }
+   }
 
 
     if(sens==2)
     {
-  
-        perso->position.x-=vitesse;
+       if(perso->position.x<545)
+        perso->position.x+=vitesse;
+        else
+        perso->position.x+=vitesse;
     }
- 
+
        }
     
 
