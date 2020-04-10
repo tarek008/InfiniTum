@@ -1,4 +1,4 @@
-void mouvement_souris(int *left;int *right;SDL_Event event;int *ianim;float *xVel;int coll;SDL_Rect posPlayer)
+void mouvement_souris(int *left;int *right;SDL_Event event;float *xVel;int coll;SDL_Rect posPlayer)
 
 {
 switch(event.type)
@@ -9,24 +9,26 @@ if(SDL_BUTTON_LEFT)
 {
 int k=event.motion.x;
 int z=(posPlayer->x)-k;
-if(z>0) {(*left)=1;(*acc)=-0.04;(*ianim)=1;}
-else {(*right)=1;(*acc)=-0.04;}}
+if(z>0) {(*left)=1;(*ianim)=1;}
+else {(*right)=1;}}
 
 break;
 
 case SDL_MOUSEBUTTONUP :
 {
-(*right)=0;(*ianim)=0;(*left)=0;
+(*right)=0;(*left)=0;
 }
 break;
 }
 
-
+int maxspeed=5;
 if((*right)==1) (*xVel)+=0.3;
 	if((*left)==1) (*xVel)-=0.3;
-(posPlayer->x)+=(*xVel);
+posPlayer->x+=(*xVel);
 if(coll==1) {(*right)=0;(*left)=0};
 	//if((*right) ==0 && (*xVel)>0.2) (*xVel)-=0.1;
 	//if((*left) ==0 && (*xVel)<-0.2) (*xVel)+=0.1;
-if((*right)==0 && (*left) ==0 && (*xVel)>=-0.2 && (*xVel)<0.2) (*xVel)=0;
+if((*right)==0 && left ==0 && (*xVel)>=-0.2 && (*xVel)<0.2) (*xVel)=0;
+if((*xVel)>maxspeed) (*xVel)=maxspeed;
+
 }
