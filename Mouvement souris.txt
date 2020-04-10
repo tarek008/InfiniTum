@@ -24,7 +24,7 @@ break;
 
 if((*right)==1) (*xVel)+=0.3;
 	if((*left)==1) (*xVel)-=0.3;
-posPlayer->x+=(*xVel);
+(posPlayer->x)+=(*xVel);
 if(coll==1) {(*right)=0;(*left)=0};
 	//if((*right) ==0 && (*xVel)>0.2) (*xVel)-=0.1;
 	//if((*left) ==0 && (*xVel)<-0.2) (*xVel)+=0.1;
