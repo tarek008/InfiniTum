@@ -1,0 +1,14 @@
+int collisionAB(SDL_Surface *iA,SDL_Surface *iB,SDL_Rect pA,SDL_Rect pB)
+{
+
+    if  ((pA.y + iA->h) < pB.y )
+      return 0;
+    else if ( pA.y > (pB.y + iB->h))
+      return 0;
+    else if ( (pA.x + iA->w) < pB.x )
+      return 0;
+    else if ( pA.x > (pB.x +  iB->w))
+      return 0;
+return 1;
+
+}
