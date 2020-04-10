@@ -1,4 +1,4 @@
-void mouvement_souris(int *left;int *right;SDL_Event event;float *xVel;int coll;SDL_Rect posPlayer)
+void mouvement_souris(int *left;int *right;SDL_Event event;float *xVel;int coll;SDL_Rect *posPlayer)
 
 {
 switch(event.type)
