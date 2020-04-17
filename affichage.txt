@@ -1,0 +1,4 @@
+void afficher_entités(int n,entite t[34],SDL_Surface ecran)
+{int i; 
+for(i=0;i<n;i++)
+{SDL_BlitSurface(t[i].enemis,NULL,ecran,&t[i].position);}}
