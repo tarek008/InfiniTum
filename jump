@@ -1,0 +1,8 @@
+void jump (double *yvel,double *canjump,double v_jump,SDL_Rect *posPlayer ) 
+{ if(posPlayer->y>400) {yVel=0;(*canJump)=1;}
+	if(posPlayer->y<400) (*canJump)=0;
+
+if (*canJump==1) {(*yvel)=(*v_jump);}
+posPlayer->y+=(*yVel);
+	-
+(*yVel)+= gravity*2;}
