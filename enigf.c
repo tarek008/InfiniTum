@@ -46,30 +46,7 @@ e->img = IMG_Load(image);
  	{
  		solution =3;
  	}
-	/*else  	if(strcmp(image,"4.png")==0)
- 	{
- 		solution =1;
-
- 	}
- 	else 	if(strcmp(image,"5.png")==0)
- 	{
- 		solution =3;
- 	}
-	else  	if(strcmp(image,"6.png")==0)
- 	{
- 		solution =3;
-
- 	}
- 	else  	if(strcmp(image,"7.png")==0)
- 	{
- 		solution =1;
-
- 	}
- 	else  	if(strcmp(image,"8.png")==0)
- 	{
- 		solution =2;
-
- 	} */
+	
 
 
  	return solution;

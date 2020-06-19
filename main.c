@@ -6,6 +6,7 @@
 #include "joeur.h"
 #include "fire.h"
 #include <math.h>
+#include <time.h>
 #include <tgmath.h>
 
 void main(SDL_Surface* screen){
@@ -52,8 +53,8 @@ rect =IMG_Load("1.png");
 
 SDL_Init(SDL_INIT_EVERYTHING);
 	TTF_Init();
-	Time time;
-	initializerTemps(&time);
+	Time timee;
+	initializerTemps(&timee);
 
 
 
@@ -333,15 +334,16 @@ if(perso.position.y < 200){
 if(perso.position.x >= 700){
 
  while(running){
-int yui=1;
+//int yui=1;
+srand(time(0));
+int yui = rand()%(2);
+printf("\n \nyui equals %d \n \n",yui);
 float optt[3];
 if(yui==1)
 {
 	int aa,bb;
 	s=randGenerFunc(screen,optt,&aa,&bb);
-	//printf("\n aaaa \n aaaa %f",optt[0]);
-//	printf("\n aaaa \n aaaa %f",optt[1]);
-//	printf("\n aaaa \n aaaaaaaaaaaaaaaaa %f",optt[2]);
+	
 	blitTXT(screen,optt,&aa,&bb);
 	do{
 	
@@ -402,7 +404,7 @@ scrollingbg(sens,&b,&perso,xVel);
 
 
 
-afficherTemps(&time,&screen);
+afficherTemps(&timee,&screen);
 			SDL_Delay(12);
 
 
